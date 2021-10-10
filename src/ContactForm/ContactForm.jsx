@@ -10,7 +10,7 @@ class ContactForm extends Component {
   };
 
   handleInputChange = e => {
-    const { name, value } = e.currentTurget;
+    const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
   };
 
@@ -35,7 +35,7 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <form className={s.form} onSubmit={handleSubmit}>
-        <label>
+        <label className={s.contactFormLabel}>
           Name
           <input
             onChange={handleInputChange}
@@ -48,7 +48,7 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <label>
+        <label className={s.contactFormLabel}>
           Number
           <input
             onChange={handleInputChange}
